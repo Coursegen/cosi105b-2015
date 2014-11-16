@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Nano Twitter Functionality - Cosi 105b</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap/css/custom.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/tipuesearch/tipuesearchmin.js"></script>
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="nanoc 3.7.3">
+  </head>
+  <body>
+
+    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+  <div class="row">
+    <div class="col-xs-7">
+      <a class="navbar-brand" href="/">Cosi 105b - Software Engineering and architecture at scale</a>
+    </div>
+    <div class="col-xs-2">
+      <div class="btn-group">
+        
+          <a class="btn btn-mini" href="/content/nt/01_functionality/"><i class="glyphicon glyphicon-chevron-left" rel="tooltip" title="previous page"></i></a> <a class="btn btn-mini" href="/content/nt/01_functionality/"><i class="glyphicon glyphicon-chevron-right" rel="tooltip" title="next page"></i></a>
+        
+      </div>
+    </div>
+    <div class="col-xs-3">
+    <form role="form" class="form-inline" action="/tipuesearch_logic/search/index.html">
+      <div class="input-group input-group-sm">
+        <input type="text" class="form-control" placeholder="search..." name="q" id="tipue_search_input" autocomplete="off" required>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+        <h3>
+	Nano Twitter Functionality
+	
+</h4>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-9">
+          <p>NanoTwitter (nt) is a baby version of Twitter designed as a platform for experimentation with scaling issues.</p>
+
+<h4 id="functionality">Functionality</h4>
+<ul>
+  <li>Users:
+    <ul>
+      <li>can register for an account by supplying an email and a password</li>
+      <li>are never deleted</li>
+    </ul>
+  </li>
+  <li>Logged in users
+    <ul>
+      <li>Can follow and unfollow other registered users</li>
+      <li>Can tweet</li>
+      <li>Can see the flow of the last n tweets by the users that they have followed</li>
+    </ul>
+  </li>
+  <li>Non-logged in users
+    <ul>
+      <li>See the flow of the last n tweets by any user</li>
+    </ul>
+  </li>
+  <li>Tweets
+    <ul>
+      <li>Consist of
+        <ul>
+          <li>a 140 characters of text</li>
+          <li>a date-time of creation</li>
+        </ul>
+      </li>
+      <li>Belong to one user</li>
+      <li>Can never be deleted</li>
+    </ul>
+  </li>
+  <li>REST Api is provided
+    <ul>
+      <li>Retrieve the firehose of all tweets by all users</li>
+      <li>Retrieve the firehose for one specific user</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="user-interface">User Interface</h4>
+<ul>
+  <li>Very basic bootstrappy html interface</li>
+  <li>Non-logged-in root page (/)
+    <ul>
+      <li>Login link (/login)</li>
+      <li>Register for account link (/user/register)</li>
+      <li>List of the most recent “n” tweets, with link to tweeter’s page</li>
+    </ul>
+  </li>
+  <li>Logged-in root page (/)
+    <ul>
+      <li>Logout link (/logout)</li>
+      <li>Box to submit a tweet (/tweet)</li>
+      <li>List of most recent ‘n’ tweets, with link to the tweeter’s page</li>
+    </ul>
+  </li>
+  <li>Specific user’s page (/user/2345)
+    <ul>
+      <li>List of users tweets</li>
+      <li>Button to follow that user (available only if logged in)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="api">API</h4>
+<ul>
+  <li>REST-y API
+    <ul>
+      <li>All paths start with /api/v1</li>
+      <li>/tweets/23 - return tweet with id</li>
+      <li>/users/23 - return user information for user 23</li>
+      <li>/tweets/recent - return the recent n tweets</li>
+      <li>/users/23/tweets - return the users recent tweets</li>
+    </ul>
+  </li>
+  <li>Values as JSON
+    <ul>
+      <li>Tweet:
+<code>{  "id": 123,
+"text": foobar,
+"created": jan-11-2015
+}</code></li>
+      <li>User: <code>{"id": name": Pito Salas}</code></li>
+      <li>List of tweets: <code>[&lt;tweet&gt;, &lt;tweet&gt;,...]</code></li>
+      <li>Follow list: <code>["user_id": 22, "user_id": 23, ...]</code></li>
+    </ul>
+  </li>
+</ul>
+
+
+        </div>
+        <div class="col-xs-3">
+          <div class="row well right-nav" style="color: rgb(158, 48, 48);padding-top: 4px;padding-bottom: 4px;padding-left: 8px;padding-right: 8px;margin-bottom: 8px;">
+            <div id="helpful" class="text-center">Was this helpful!?
+    <a id="yes-link">yes</a> / <a id="no-link">no</a>
+</div>
+          </div>
+          <div class="row well right-nav" style="padding: 5px;">
+            <ul>
+              
+                <li>
+            <label class="tree-toggler level1">
+              <span class="glyphicon glyphicon-minus-sign glyphicon-small "></span>
+              Background
+            </label><ul class="tree" style="display: block"><li class=""><a href="/">Welcome!</a></li></ul></li>
+              
+                <li>
+            <label class="tree-toggler level1">
+              <span class="glyphicon glyphicon-minus-sign glyphicon-small "></span>
+              NanoTwitter
+            </label><ul class="tree" style="display: block"><li class=""><a href="/content/nt/01_functionality/">Nano Twitter Functionality</a></li></ul></li>
+              
+                
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <footer>Copyright (2014-2015) R. Pito Salas, pitosalas@gmail.com</footer>
+      </div>
+  </div>
+</div>
+
+
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="/bootstrap/js/custom.js"></script>
+    <script src="/chalkmark/chalkmark.js"></script>
+    <script> $(document).ready(function() {
+      $('#tipue_search_input').tipuesearch({'highlightEveryTerm': true, 'show': 8, 'showURL': false, 'descriptiveWords': 50});
+    });</script>
+  </body>
+</html>
