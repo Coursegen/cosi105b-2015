@@ -8,7 +8,7 @@ AWS_BUCKET = "cosi105-2015"
 
 # Course short name
 COURSE_SHORT_NAME = "Cosi 105b"
-COURSE_LONG_NAME = "Software Engineering and architecture at scale"
+COURSE_LONG_NAME = "Software Engineering and Architecture at Scale"
 
 # Schedule information. Note that Monday is day 0
 LECTURES_SCHEDULE_CONFIG = ScheduleDef.new(
