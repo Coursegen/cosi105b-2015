@@ -1,0 +1,39 @@
+---
+title: Good Practices
+---
+<%= homework_hdr %>
+* Read [POODR] Chapters 2,3. Do all the examples. <%= deliverable "create a directory with all the typed in code from your readings. Zip it up and submit it." %>
+* Complete <%= link_to_topic :pa1 %>. <%= deliverable "Zip up and submit the work."%>
+* Read about [Code Smells](http://martinfowler.com/bliki/CodeSmell.html). Examine your own <%= link_to_topic :pa1 %> and <%= deliverable "Point out two code smells." %>
+
+#### Good Programming
+* Disposable code
+  * Not designed
+  * Incomprehensible 1 year, 1 month, 1 week later
+  * Just barely works, no idea why
+  * "write-only"
+  * Long, ugly methods
+  * Bad or meaningless naming
+
+* Aesthetics
+  * Like a 'beautiful proof' or an 'elegant argument'
+  * Programming in the small or large can be beautiful
+  * [Smelly code](http://martinfowler.com/bliki/CodeSmell.html) is ugly, lacks beauty, is inellegant.
+
+* Smells and Slogans
+  * DRY: "Do Not Repeat Yourself".
+  * YAGNI: "You're Not Gonna Need It"
+
+* Other basic hygene
+  * What's the right amount of code commenting?
+  * How important is proper formatting?
+  * Why is naming important and what is it's connection to commenting?
+
+* ['Sandy Metz' Rules](http://robots.thoughtbot.com/sandi-metz-rules-for-developers)
+  * Classes can be no longer than 100 lines of code
+  * Methods can be no longer than five lines of code
+  * Pass no more than four parameters into a method
+  * Controllers (Rails) can insantiate only one object. Therefore views can only know about one instance variable, and only send methods to that object. (@view_presenter.user.username is not allowed)
+
+* Discussion about hard and fast rules
+
