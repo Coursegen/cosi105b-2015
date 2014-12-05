@@ -20,6 +20,7 @@ LECTURES_SCHEDULE_CONFIG = ScheduleDef.new(
 
 # Sections in the right hand margin of the page
 SECTION_CONFIG = [
+  SectionDef.new("Intro", "intro", type: :section),	
 	SectionDef.new("Lectures", "lectures", type: :lecture, schedule: LECTURES_SCHEDULE_CONFIG, bullet: :dash),
   SectionDef.new("Background", "background", type: :section),
   SectionDef.new("NanoTwitter", "nt", type: :section),
