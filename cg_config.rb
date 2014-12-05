@@ -20,10 +20,13 @@ LECTURES_SCHEDULE_CONFIG = ScheduleDef.new(
 
 # Sections in the right hand margin of the page
 SECTION_CONFIG = [
-	SectionDef.new("Lectures", "lectures", type: :lecture, schedule: LECTURES_SCHEDULE_CONFIG),
-	SectionDef.new("Introduction", "intro", hidden: false, type: :section),
+	SectionDef.new("Lectures", "lectures", type: :lecture, schedule: LECTURES_SCHEDULE_CONFIG, bullet: :dash),
   SectionDef.new("Background", "background", type: :section),
   SectionDef.new("NanoTwitter", "nt", type: :section),
 	SectionDef.new("Topics", "topics", hidden: true, type: :section),
   SectionDef.new("Hidden", "hidden", hidden: true, type: :section)
 ]
+
+# Options are:
+# bullet_style: css style for each bullet
+STYLING_CONFIG = {bullet_style: "\"font-size: 60%; width: 10px; color: grey\""}
