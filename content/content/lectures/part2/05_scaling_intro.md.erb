@@ -3,6 +3,15 @@ title: Intro to Scaling
 desc: General concepts to help understand scaling and scaling problems
 ---
 <%= homework_hdr %>
+* Read [SODRR] Chapter 3.
+  * This chapter introduces a running example of this book. It is a social feed reader. It's analogous but different from our nanoTwitter. It is actually a little more complicated than what will be our running project.
+  * In this chapter you learn what all the database tables (and therefore what the Models are.) Based on what we've covered so far you should be able to follow it.
+  * This chapter mentions Rails. Rails is a bigger sort-of-superset of Sinatra. They are both Ruby libraries. **Do not use Rails** Whereever there's an example in the book, only use the Sinatra versions.
+  * Don't get confused: We **are** using ActiveRecord which is a separable Rails library which is also used in Sinatra. It is the "Object Relational Mapper."
+  * In this chapter you will only be writing the ruby files describing the model for the Social Feed Reader. They won't do anything yet.
+  * It is most important that you take the time to understand the overall set of tables, why they exist and how they relate to each other.
+  * **Remember that source code has to be stored in a new top level directory called `/portfolio/yourname/socialfeedreader`, inside your <%= link_to_intro :portfolio %>.**
+* Create a neat diagram of all the tables and the relationships between them. Use lines to connect the tables to each other for each has_many, belongs_to etc. relationship. <%= deliverable "the diagram as a pdf" %>
 
 <%= include_topic :scaling %>
 
