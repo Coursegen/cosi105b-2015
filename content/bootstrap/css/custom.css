@@ -1,13 +1,16 @@
 @import url(//fonts.googleapis.com/css?family=Telex);
 
 .navbar-inverse {
-	background-color: black;
+	background-color: rgb(31, 36, 89);
 }
 
-.navbar a.navbar-brand {
+.masthead {
+	font-size: 20px;
+	margin-left: -15px;
 	color: white;
-	padding-top: 7px;
+	padding-top: 3px;
 }
+
  
 .navbar {
 	min-height: 35px;
@@ -16,11 +19,11 @@
 
 .navbar a:hover {
 	color: white;
+	text-decoration: none;
 }
 
 .navbar a {
-	padding: 6px;
-	color: light-blue;
+	color: white;
 }
 
 .navbar .input-group-sm input{
