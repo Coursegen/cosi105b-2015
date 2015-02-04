@@ -1,64 +1,20 @@
 ---
-title: Portfolio
+title: Code Portfolio
 ---
-#### What it is
-Throughout this course there will be many programming homeworks. You will be organizing them into a coursework portfolio on the Brandeis server so that you are not constantly handing in bits and pieces.
+<%= include_topic :portfolio_instructions %>
 
-<%= callout("IMPORTANT", " You are required to organize your portfolio in a very specific way so that we can automatically review your work.") %>
+#### Specifics for this course
+* Name the top level directory **exactly** `cosi105b_<yourbrandeisid>`
+* You will have the following subdirectories, named **exactly** like this:
+  * hardway
+  * movies-1
+  * movies-2
+  * poodr
+  * sinatraintro
+  * ... more to come
 
-#### Grading
-Every Monday TA will evaluate your portfolio directory and give it a score which will be based on:
-
-* How current you are with the assignments
-* How well you have applied the learnings so far regarding coding style, design, object orientation, good naming and so on.
-
-#### Portfolios in DropBox
-
-* Download and install the Dropbox Desktop application from https://www.dropbox.com/install
-* This will create a Dropbox folder on your local machine.  Within this folder, create a folder named cs105_yourname.  This will serve as the top-level portfolio directory.  
-* Using the Dropbox web interface, share this folder with the TAs and instructor.  To do this, select the folder, press the Share dropdown, select invite people to collaborate, and add the following emails:
-
+##### Emails to share your Dropbox folder with:
 * Nick Moran: nemtiax@gmail.com
 * Pito Salas: pitosalas@gmail.com
 * Eyad Fallatah: fallatah@brandeis.edu
-
-#### Organizing your portfolio
-
-When starting an assignment, create a new directory within your shared cs105_yourname folder.  For example, your "Learn Ruby the Hard Way" work should be in cs105_yourname/hardway, as follows:
-
-* `cs105b_yourname/hardway` - Contains all the code written as you read along "Ruby The Hard Way", organized lesson by lesson, lesson1, lesson2, etc. In each lesson* subdirectory will have whatever ruby code you wrote for the lesson (e.g. ex5.rb) plus a readme.txt file with notes of what you learned from the lesson in one or two sentences.
-* `cs105b_yourname/poodr` - Contains programs written as you read along in "Practical Object Oriented Design in Ruby", organized by chapter, ch1, ch2 etc. Wach ch* subdirectory will have whatever ruby code you wrote for the lesson plus a readme.txt file with notes of what you learned from the lesson.
-* `cs105b_yourname/sodrr` - Containing programs written as you read along in "Service Oriented Design in Ruby on Rails", organized by chapter, ch1, ch2, etc. In each ch* subdirectory you will have whatever ruby code you wrote for the lesson plus a readme.txt file with notes of what you learned from the lesson.
-* `cs105b_yourname/...` - Other discrete programming assignments such as <%= link_to_topic :pa_movies_1 %>, <%= link_to_topic :pa_movies_2 %> and so on, each get a subdirectory under `cs105b_yourname`. In each subdirectory will have whatever ruby code you wrote for the lesson plus a readme.txt file with notes of what you learned from the lesson.
-
-Note: you only need subdirectories for those lessons, chapters or progamming assignments that you actually got to.
-
-#### Example
-
-* A typical set up will look like this:
-
-~~~~
-cs105b_cburkh/
-    hardway/
-      lesson1/
-        ...
-      lesson2/
-        ...
-    poodr/
-      ch2/
-        ...rb
-        ...rb
-      ch3/
-        ...rb
-    sodrr/
-      ch1/
-        ...rb
-      ch2/
-        ...rb
-    movies-1/
-      ...rb
-    movies-2/
-      ...rb
-      
-~~~~
 
