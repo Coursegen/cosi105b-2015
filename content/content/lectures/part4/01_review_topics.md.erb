@@ -30,7 +30,39 @@ homework: Teams complete nT 0.1; Read Chapter 5 of [POODR]
 
 #### Quick Review of Cloud Deployment on Heroku
 * Look at <%= link_to_topic :cloud_deployment %>
-* Look at <%= link_to_topic :hands_on_heroku_for_sinatra %>
+* Look at <%= link_to_topic(:hands_on_herokusinatra) %>
+
+
+#### POODR Example
+* Look at and examine the sequence of examples from Chapter 5
+
+* Static vs. Dynamic Typing
+  * Java interfaces are like Classes without method bodies
+  * You can only call a method on the right type
+  * There is enough information in the text of the program
+  * Compile can catch errors and compiled code can be optimized for performance
+
+~~~~ java
+interface Animal {
+
+   public void eat();
+   public void travel();
+}
+Animal myAnimal = new Dog();
+myAnimal.eat();
+~~~~
+
+* Dynamic Typing
+  * Objects determine at run time whether they implement a message (method)
+  * Nothing in the syntax of the code limits what is possible at run time
+  * Compilation and exection are more tightly connected
+  * Opens up new and rich design options (Duck typing, meta programming)
+
+<%= include_topic :four_rules_simple_design %>
+
+#### Next Class
+* Look at homework: <%= link_to_next_lecture %>
+
 
 
 
