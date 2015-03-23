@@ -19,3 +19,6 @@ Composition vs. Inheritence:
 1) Are alternative design approaches which solve essentially the same problem. Everything you can do with one, you can do with the other
 2) Composition is when a class is designed to need another class to provide it's full functionality. When Inheritence and Composition can both be used to solve a problem, prefer Composition every time.
 3) Two fundamental Object Oriented design patterns, which are important and applicable in different situations. They are not the same thing.
+
+-- Chapter 9 of POODR
+
