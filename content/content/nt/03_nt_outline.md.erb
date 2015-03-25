@@ -21,15 +21,16 @@ Each step in this recipe has a name which I use to refer to it elsehwee in this 
 * **\[MANUALTEST\]** Once nT is up on heroku, try having all three team members log into it at the same time and do some tweeting.
 
 ##### Inital Load Testing (nT version 0.3)
+  **Here are important instructions: <%= link_to_topic :nt_load_testing %>**
 
-* **\[LOADTEST\]** Investigate and choose a way to load test your app (see for example Loader.io)
-* **\[INSTRUMENT\]**Investigate and choose a way to instrument your test app (see for example NewRelic)
+* **\[LOADTEST\]** Investigate and choose a way to load test your app. Use loader.io. Configure your app and heroky accordingly.
+* **\[INSTRUMENT\]**Investigate and choose a way to instrument your test app. Use new relic. Configure your app and heroku accordingly.
 * **\[RUNLOADEXPERIMENT\]**Design and run a series of load tests and write a report of your findings
 
-##### Performance Tuning
+##### Performance Tuning (nt version 0.4)
 
 * **\[IMPROVESCHEMA\]**Update your schema to put indeces and other enhancements and see the effect on scaling
-* **\[NEWWEB\] Switch web server from WebBrick; try others, measure.
+* **\[NEWWEB\]** Switch web server from WebBrick; try others, measure.
 * **\[SWAPDATABASE\]**Try different databases (Mongo or others) and see the effect on scaling
 * **\[SCALEEXPERIMENT\]**Design and execute scaling experiments and see the differences
 

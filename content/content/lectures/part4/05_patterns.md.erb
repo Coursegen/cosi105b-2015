@@ -1,10 +1,18 @@
 ---
 title: Design Patterns
+desc: Review and go deeper on Design Patterns
+homework: nT 0.3, listen to podcast and read article, write reflection the night before!
 ---
 <%= homework_hdr %>
-* Read: [Facade Patttern](http://code.tutsplus.com/tutorials/design-patterns-the-facade-pattern--cms-22238)
-* Read: [The Art of Enbugging](http://media.pragprog.com/articles/jan_03_enbug.pdf)
-* Read: [A begginers Guide to Design Patterns](http://code.tutsplus.com/articles/a-beginners-guide-to-design-patterns--net-12752)
+* Actively Read/Listen. <%= ir "Submit answers to the questions by midnight before class" %>
+  * [The Art of Enbugging](http://www.ccs.neu.edu/research/demeter/related-work/pragmatic-programmer/jan_03_enbug.pdf)
+  * [Book Club: Patterns of Enterprise Application Architecture with Martin Fowler](http://devchat.tv/ruby-rogues/097-rr-book-club-patterns-of-enterprise-architecture-with-martin-fowler)
+  * Answer these 3 questions:
+    * In what way are the "Tell don't ask" and the "Law of Demeter" principles related, that is, serving the same more basic purpose?
+    * Explain the Active record pattern and how it is related or different from the Data mapper pattern.
+    * What 1 or 2 important things from the reading/listening did you not undertand; and if you understood it all, then what 1 or 2 important things were most insightful/useful/valuable to you.
+  * <%= deliverable "BY MIDNIGHT THE NIGHT BEFORE: the answers to these questions, as a pdf, 1 page max" %>
+
 * Complete nT 0.3 functionality 
 	* See <%= link_to_section :nt, :nt_outline %>: LOADTEST, INSTRUMENT, RUNLOADEXPERIMENT and MANUALTEST
 	* Of course this assumes that you have fully completed last week's assignment for nT 0.2
@@ -13,10 +21,43 @@ title: Design Patterns
 		* You need to have Codeship.com configured, and have codeship in turn deploy to heroku
 	* Work should be done in your <%= link_to_intro :portfolio %>, directory `/nanotwitter`. When complete, submit it to github. You should use the same github repo but tag the previous version as 0.2 and the current version of 0.2. (See [Git Tagging](http://git-scm.com/book/tr/v2/Git-Basics-Tagging))
   * Team Interim Report: Write a report describing process so far, and results of initial tests (from your lab notebook).
-<%= team_deliverable "Team interim report, 1-2 pages, pdf, including completed nanoTwitter Version 0.3 github URL" %>
+  * <%= team_deliverable "Team interim report, 1-2 pages, pdf, including completed nanoTwitter Version 0.3 github URL" %>
 
 #### Demos
 * Each team will be asked to demo their version of nT to the class by having everyone sign up for an account!
 
 #### Design Patterns
-What are design patterns. Explore one in detail, the facade pattern
+* Patterns in software (inspired by:[A Pattern Language, by Christopher Alexander](http://www.amazon.com/gp/product/0195019199))
+* Patterns and Anti-patterns
+* Anti-patterns vs. Code smells
+* Why do these buzz words matter anyway?
+
+#### "Meta patterns" or "just good design"
+* Knowledge should be in only one place (DRY)
+* Separate out things that change from those that stay the same
+* Tell don't ask
+* Prefer composition over inheritance
+* Delay, delay, delay [YAGNI]
+
+#### Examples we've already seen
+* MVC, Model View Controller
+* Template class and template method pattern
+* Factory class and factory method pattern
+* REST Pattern
+* ActiveRecord Pattern
+
+#### What are the Major ones?
+* There are many catalogs
+* Some patterns are 'language dependent'
+  * e.g. dynamic vs. static typing, method overloading, multiple inheritance
+* Don't try to memorize them
+* Don't feel like you are more 'virtuous' if you do use them
+
+#### Some of my favorites
+* Template Method
+* Factory pattern
+* Strategy pattern
+* Builder pattern
+
+#### Next Class
+* Look at homework: <%= link_to_next_lecture %>
