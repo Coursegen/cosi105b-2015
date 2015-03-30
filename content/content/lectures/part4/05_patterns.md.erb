@@ -26,6 +26,29 @@ homework: nT 0.3, listen to podcast and read article, write reflection the night
 #### Demos
 * Each team will be asked to demo their version of nT to the class by having everyone sign up for an account!
 
+#### Reading Discussion
+* Review Law of Demeter (shorthand)
+* Review DataMapper vs. ActiveRecord
+  * More about DM
+  * Which is simpler
+  * Applicability of each
+  * What is the entity manager?
+* Terms:
+  * PORO: Plain Old Ruby Object
+  * aggregate object: Any object that represents a collection of something (e.g. array etc.)
+  * Lazy loading (or lazy anything): Delaying actually doing the work until it is specifically required. (Compare to gem 'eager loading')
+  * side-effect: When a method changes something in it's environment. Compare: functional, where a method takes inputs and generate outputs but don't do anything outside of that,
+  * ORM: Object Relational Mapper
+  * Data Gateway pattern. Building block of a Data Mapper. (See [Table Data Gateway](http://martinfowler.com/eaaCatalog/tableDataGateway.html)
+* Why did some people mention PHP in their responses?
+
+##### References
+* An example of a data mapper implementation: [Perpetuity Gem](https://github.com/jgaskins/perpetuity)
+* An example (no guarantees) of DataMapper inside Sinatra: [Sinatra DataMapper Example](https://github.com/tomaszj/sinatra-datamapper-sample/blob/master/app.rb)
+* [Getting Started with DataMapper](http://datamapper.org/getting-started.html)
+
+
+
 #### Design Patterns
 * Patterns in software (inspired by:[A Pattern Language, by Christopher Alexander](http://www.amazon.com/gp/product/0195019199))
 * Patterns and Anti-patterns
