@@ -5,10 +5,14 @@ homework: Watch video, read article, write reflection
 ---
 <%= homework_hdr %>
 * Watch and Read
-  * Watch: [Twitter Architecture](https://www.youtube.com/watch?v=VttXHNveuwI)
+  * Watch: [Basics of Database Sharding](https://youtu.be/W6pFKihvqH4). Quick explanation: Sharding is way to break a database that is getting too big into two (or n). Each is called a "shard", and has the same schema. A certain record is sent to one or the other shard based on some value, e.g. their last name or employee id.
   * Read: [5 Early Lessons from Rapid High Availability Scaling](http://mikepackdev.com/blog_posts/40-5-early-lessons-from-rapid-high-availability-scaling-with-rails). Don't be concerned that it mentions "Rails", the lessons are equally applicable (almost) to Sinatra
-  * Read: [Load Testing 101, Essential Tips](http://www2.smartbear.com/rs/smartbear/images/webloadui-load-testing-101-1.pdf)
-  * Watch: [Basics of Database Sharding](https://youtu.be/W6pFKihvqH4)
+  * Think about and answer these questions:
+  	* What is meant by denormalization and what does it has to do with scalability?
+  	* Can you clarify why the article says that you are screwed if you don't create an index early?
+    * What's the SSD that is mentioned in the context of the sharing article and why does it matter?
+    * What 1 or 2 important things from the reading/listening did you not undertand; and if you understood it all, then what 1 or 2 important things were most insightful/useful/valuable to you.
+  * <%= deliverable "BY MIDNIGHT THE NIGHT BEFORE: the answers to these questions, as a pdf, 1 page max" %>
 * Teams, continue to work on nanoTwitter. This is your primary deliverable at this point.
 
 #### Discussion
