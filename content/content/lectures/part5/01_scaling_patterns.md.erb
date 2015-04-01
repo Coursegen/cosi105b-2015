@@ -17,6 +17,17 @@ homework: Watch video, read article, write reflection
 
 #### Discussion
 * Points Raised in the reading
+  * Multiple questions about denormalization
+  * Sharding
+    * Why would anyone ever use anything other than Hash lookup
+    * How to apply it to nanoTwitter
+    * Is it always a good idea?
+    * How does consistent hashing even work?
+  * Terms
+    * Chokepoint
+    * Indexing: Note the uniqueness argument too
+    * Universal User: What?
+
 
 #### Some Background
 
@@ -140,7 +151,7 @@ homework: Watch video, read article, write reflection
   * Foreign keys might now point to another database
   * Databases can get out of sync
 
-<%= callout("NB ", " Both kinds of sharding are advanced techniques and you should only use them when you have quantitative reasons to believe they will improve a measured performance issue.") %>
+<%= callout("NB", " Both kinds of sharding are advanced techniques and you should only use them when you have quantitative reasons to believe they will improve a measured performance issue.") %>
 
 #### References
 * [Building Scalable Databases: Pros and Cons of Sharding](http://www.25hoursaday.com/weblog/2009/01/16/BuildingScalableDatabasesProsAndConsOfVariousDatabaseShardingSchemes.aspx)
