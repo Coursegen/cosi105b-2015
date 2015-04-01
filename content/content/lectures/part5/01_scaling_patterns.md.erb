@@ -113,8 +113,8 @@ homework: Watch video, read article, write reflection
   User: (id, name, biography, email)
   Autentication: (id, last_login, encrypted_pw)
   Photos: (id, profile_photo_jpg)
-* Pros and Cons
-  * Forces a bigger change to your application architecture
+* How it changes your application
+  * Pretty basic rearchitecture into separate services
 
 #### Sharding (Horizontal partition)
 * "buckets" of users (== shards)
@@ -128,11 +128,22 @@ homework: Watch video, read article, write reflection
     * Range Based: Range of some scalar value (record id, first letter of name, etc.)
     * List Based: Take some other property (e.g. zipcode, department)
     * Hash Based: Compute a hash on some value
-* How do you access the data
+* How it changes your application
   * Whenever you either read, write, or search
   * Require to include enough information to pick the right shard
 
+#### Pros and Cons
+* Joins become a problem
+  * What was once one db is now spread over more than one db
+  * Can lead to denormalization
+* Data Integrity
+  * Foreign keys might now point to another database
+  * Databases can get out of sync
 
+<%= callout("NB ", " Both kinds of sharding are advanced techniques and you should only use them when you have quantitative reasons to believe they will improve a measured performance issue.") %>
+
+#### References
+* [Building Scalable Databases: Pros and Cons of Sharding](http://www.25hoursaday.com/weblog/2009/01/16/BuildingScalableDatabasesProsAndConsOfVariousDatabaseShardingSchemes.aspx)
 
 #### Next Class
 * Look at homework: <%= link_to_next_lecture %>
