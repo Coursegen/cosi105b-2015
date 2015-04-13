@@ -1,0 +1,79 @@
+---
+title: Scaling Patterns, Continued
+desc: Queueing and Concurrency
+homework: nT Version 0.4
+---
+<%= homework_hdr %>
+* Complete nT 0.4 functionality 
+  * See <%= link_to_section :nt, :nt_outline %>: "Performance Tuning (nt version 0.4)"
+  * Of course this assumes that you have fully completed last week's assignment for nT 0.3
+  * Work should be done in your <%= link_to_intro :portfolio %>, directory `/nanotwitter`. When complete, submit it to github. You should use the same github repo but tag the previous version as 0.3 and the current version of 0.4. (See [Git Tagging](http://git-scm.com/book/tr/v2/Git-Basics-Tagging))
+  * Team Interim Report: Write a report describing process so far, and results of initial tests (from your lab notebook).
+  * <%= team_deliverable "Team interim report, 1-2 pages, pdf, including completed nanoTwitter Version 0.3 github URL" %>
+
+### Scaling patterns
+* Do more with the available resources
+* Do more things at the same time
+* Resource idle time is your enemy
+  * CPU
+  * Network
+  * Disk
+  * Database
+
+#### Scenarios
+* Users can ask for a detailed report about their twitter traffic
+  * It can be a one shot, or regenerated at midnight
+  * It can be displayed on the screen or emailed
+  * Inline is no good because of computational cost and error handling
+* Users tweet with attached images
+  * Submitted in all kinds of formats, shapes and sizes
+  * Need to convert and resize to standard shapes and sizes
+  * Inline no good due to computational cost and error handling
+* System sends an email to newly registered users
+  * After creating the new user in db, send a confirm email with a link
+  * Inline is no good, due to network latency and error handling
+
+### Concurrency on a single copmputer
+
+* Difference between syncrhonous and asynchronous
+* Difference between concurrent and parallel
+* Operating Primitives (pretty much universal)
+  * Processes ("forking")
+    * Use more memory (new VM for each process)
+      * for the data + the program + everything
+      * "Copy on write"
+    * Context switching very expensive
+    * Communication expensive (IPC)
+    * Slower to create and destroy
+    * Less hard to program and debug (not easy!)
+  * Threads
+    * Use less memory (Shared memory space)
+    * Context switching cheap
+    * Communication cheap (via queues and shared memory)
+    * Fast to create and destroy
+    * Harder to program and debug
+    * Assumes "Thread-safe" code
+      * Ruby: See GIL
+
+### Queueing Systems: RabbitMQ
+
+#### Install and run rabbitmq
+* homebrew: `brew install rabbitmq`
+* start: `rabbitmq-server`
+
+#### Key terms in RabbitMQ
+* Producers: Software that sends messages 
+* Consumers: Software that consumes (and processes) messages
+* Queues: FIFO "holding area"  for messages
+* Message: A bit of data which often incorporates an action or command
+* Exchange: Receives messages from producers, and sticks them into a queue
+
+#### Concepts in RabbitMQ
+* Acknowledgement: So that if the server dies before finishing, the message gets given to someone else
+* Durability: So that if the Queueing Service dies, the content of the queue survives
+
+
+#### References
+* [RabbitMQ Tutorial](https://www.rabbitmq.com/tutorials/tutorial-one-ruby.html)
+* [Rabbit Demo (github)](https://github.com/Cosi-105/rabbit_demo)
+* [Concurrency and Parallelism Blog Post](http://www.toptal.com/ruby/ruby-concurrency-and-parallelism-a-practical-primer)
